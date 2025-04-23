@@ -10,6 +10,5 @@ import java.util.UUID;
 
 @Repository
 public interface TodoRepository extends JpaRepository<Todo, UUID> {
-    @Query("select * from Todo t where t.user_id = ?1")
-    List<Todo> findByUserIdQuery(String userId);
+    List<Todo> findByUserId(String userId);
 }

@@ -22,8 +22,9 @@ public class Todo extends BaseEntity {
     @Column(name = "todo_id", nullable = false, updatable = false)
     private UUID id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
+//    @ManyToOne
+//    @JoinColumn(name = "user_id")
+    @Column(name = "user_id")
     private String userId;
 
     @Column(name = "content")
